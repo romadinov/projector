@@ -1,0 +1,12 @@
+.DS_Store
+build/
+DerivedData/
+.build/
+.swiftpm/
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+demo/*.mp4
+demo/take.*
+demo/audio/
+demo/dd/
+demo/*.xcodeproj

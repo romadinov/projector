@@ -1,0 +1,54 @@
+[
+ {
+  "id": "s01_open",
+  "text": "This is Projector, a Microsoft Project style planner for Mac, iPad and iPhone. I'll open the sample project, a website relaunch."
+ },
+ {
+  "id": "s02_wbs",
+  "text": "On the left is the work breakdown structure: phases, tasks and milestones, each with a duration, its predecessors, and the people assigned. On the right, the Gantt chart draws every task and every link."
+ },
+ {
+  "id": "s03_critical",
+  "text": "The red bars are the critical path. Projector schedules with a forward and a backward pass, so it knows every task's slack. Zero slack means red: if that task slips, go-live slips."
+ },
+ {
+  "id": "s04_start_after",
+  "text": "CMS integration is blue, because it has slack. It also has a starts-after date: the CMS licence begins on Thursday the nineteenth. The bracket in the chart marks that earliest start, and the inspector shows two days of slack left."
+ },
+ {
+  "id": "s05_deadline",
+  "text": "Phases can have dates too. The Design phase must finish by the seventeenth of November. The arrow at the end of its bar marks the deadline, and green means the plan meets it."
+ },
+ {
+  "id": "s06_slip",
+  "text": "Now, visual design is going to take three days longer. I'll change six days to nine."
+ },
+ {
+  "id": "s07_late",
+  "text": "Everything after it moves. Design and go-live now miss their deadlines. Their arrows turn red, slack goes negative, and the status bar counts the late tasks."
+ },
+ {
+  "id": "s08_fix",
+  "text": "I'll set it back to six days, and the plan is on time again."
+ },
+ {
+  "id": "s09_resources",
+  "text": "Next, the resource plan. It's a spreadsheet: a row for each person, their assignments underneath, and the hours they work each week. The red cells are weeks where someone is overbooked."
+ },
+ {
+  "id": "s10_level",
+  "text": "Level Resources delays lower-priority work until nobody is overbooked. The red cells clear, but go-live slips into January and misses its deadline. Now the trade-off is visible: more people, or a later date."
+ },
+ {
+  "id": "s11_quick",
+  "text": "Finally, Quick Plan. I start a new project and just jot the plan down: each task with how long it takes, what it comes after, who does it, and any dates. Demolition can't start before the twenty-third, and handover is due on the fourth of December."
+ },
+ {
+  "id": "s12_preview",
+  "text": "The preview schedules it as I type. It shows the finish date, the critical path, and a warning that handover misses its deadline by two days. With an API key, Plan with Claude turns rough notes like these into a full plan."
+ },
+ {
+  "id": "s13_apply",
+  "text": "Apply, and it's a real project, with the critical path and the deadline in the chart. Save it to iCloud Drive and the same plan opens on the Mac and on the iPhone."
+ }
+]

@@ -1,0 +1,92 @@
+name: Projector
+options:
+  bundleIdPrefix: com.ideahelix
+  deploymentTarget:
+    iOS: "27.0"
+    macOS: "27.0"
+  createIntermediateGroups: true
+packages:
+  ProjectorKit:
+    path: Packages/ProjectorKit
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    PRODUCT_NAME: Projector
+    PRODUCT_BUNDLE_IDENTIFIER: com.ideahelix.projector
+    ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+    ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+    GENERATE_INFOPLIST_FILE: YES
+    INFOPLIST_KEY_CFBundleDisplayName: Projector
+    INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.productivity
+    CODE_SIGN_STYLE: Automatic
+    DEVELOPMENT_TEAM: SZVSSCJQFN   # Alexey Romadinov (Individual)
+
+targetTemplates:
+  ProjectorApp:
+    type: application
+    sources:
+      - path: App/Shared
+    dependencies:
+      - package: ProjectorKit
+
+targets:
+  Projector-macOS:
+    templates: [ProjectorApp]
+    platform: macOS
+    settings:
+      base:
+        ENABLE_HARDENED_RUNTIME: YES
+    entitlements:
+      path: App/macOS/Projector.entitlements
+      properties:
+        com.apple.security.app-sandbox: true
+        com.apple.security.files.user-selected.read-write: true
+        com.apple.security.network.client: true
+    info:
+      path: App/macOS/Info.plist
+      properties: &docinfo
+        CFBundleDocumentTypes:
+          - CFBundleTypeName: Projector Plan
+            CFBundleTypeRole: Editor
+            LSHandlerRank: Owner
+            LSItemContentTypes: [com.ideahelix.projector.plan]
+        UTExportedTypeDeclarations:
+          - UTTypeIdentifier: com.ideahelix.projector.plan
+            UTTypeDescription: Projector Plan
+            UTTypeConformsTo: [public.data, public.content]
+            UTTypeTagSpecification:
+              public.filename-extension: [projector]
+              public.mime-type: [application/x-projector-plan]
+
+  Projector-iOS:
+    templates: [ProjectorApp]
+    platform: iOS
+    settings:
+      base:
+        TARGETED_DEVICE_FAMILY: "1,2"
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad: "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
+        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone: "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
+    info:
+      path: App/iOS/Info.plist
+      properties:
+        <<: *docinfo
+        UISupportsDocumentBrowser: true
+        LSSupportsOpeningDocumentsInPlace: true
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: true
+
+schemes:
+  Projector-macOS:
+    build:
+      targets:
+        Projector-macOS: all
+    test:
+      targets:
+        - package: ProjectorKit/ProjectorKitTests
+  Projector-iOS:
+    build:
+      targets:
+        Projector-iOS: all

@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		031A000FD950274C2222BAEB /* TimelineScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DF6C9D15910B28BDF8C8FF /* TimelineScale.swift */; };
+		06DF460FB3A5B47231F6440D /* ProjectDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE6EE451CB281195A0E22B7 /* ProjectDocument.swift */; };
+		096E153B592EBDEB840F0F3F /* QuickPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648DA9566CFAEFA4C1FA90A9 /* QuickPlanView.swift */; };
+		13BC1FE8B5E97D03D3D459B4 /* ProjectWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116048A6DBB5689174A3AC51 /* ProjectWindow.swift */; };
+		18C301BD01D0A0C791764888 /* ProjectSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979F349674E54193651408A8 /* ProjectSettingsView.swift */; };
+		1A1C516071F061F36A7ACE74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 150BA2966036265E09AC64FF /* Assets.xcassets */; };
+		297A5D4A810F57A384107A02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 150BA2966036265E09AC64FF /* Assets.xcassets */; };
+		322E84FAD1EAC6E85E908A75 /* ResourcePlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB8FDF2799927FDDF29413F /* ResourcePlanView.swift */; };
+		3782CB0D3FEB153AA3EC3907 /* ResourceInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CEE971E8742A70E825D914 /* ResourceInspector.swift */; };
+		3AFF568AF9D7A26F629BB443 /* CommitTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1B086EB9A8186756DDAE32 /* CommitTextField.swift */; };
+		42F38F678A3AA4C00079E3F0 /* TimelineSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FED60236DB340181339D84 /* TimelineSplitView.swift */; };
+		57AA235317EB28F31EBD7673 /* ResourcePlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB8FDF2799927FDDF29413F /* ResourcePlanView.swift */; };
+		595518601794F0E783201108 /* GanttRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FB8F4CA73E6560A337500C /* GanttRenderer.swift */; };
+		5DC00E70A144EF59C1B6F985 /* ResourceInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CEE971E8742A70E825D914 /* ResourceInspector.swift */; };
+		5F6C0EE5FE88C6C0B7056A2A /* ProjectorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AC4F55C6640994EA45ED7A /* ProjectorApp.swift */; };
+		6DEA41A26FDEA2AA2251EBA8 /* GanttView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4D9A4DAD451D304235A7E9 /* GanttView.swift */; };
+		75F267AAF5E9354B0374FDE7 /* ProjectorKit in Frameworks */ = {isa = PBXBuildFile; productRef = A02B1E7BE80F340CED93625D /* ProjectorKit */; };
+		79E9D58E4E03F1DCDA3C7C60 /* ProjectSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979F349674E54193651408A8 /* ProjectSettingsView.swift */; };
+		7AB7C442694221BC4968B680 /* ProjectDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE6EE451CB281195A0E22B7 /* ProjectDocument.swift */; };
+		7FA31E74D9201C761E87CCDF /* ClaudePlanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05876D8E87E0D8E8B8A8A5F2 /* ClaudePlanner.swift */; };
+		8B0B0B7CBD384E075A0A9A56 /* ProjectorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AC4F55C6640994EA45ED7A /* ProjectorApp.swift */; };
+		9926DA7EB4BE385618B0BD2A /* ProjectorKit in Frameworks */ = {isa = PBXBuildFile; productRef = ACB45B38847A368CA7879F29 /* ProjectorKit */; };
+		9C45E880D93E3AAA7B26F25C /* GanttView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4D9A4DAD451D304235A7E9 /* GanttView.swift */; };
+		A0789D4C353D511C3D2961CD /* GanttRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FB8F4CA73E6560A337500C /* GanttRenderer.swift */; };
+		A409021A44AFC78530CF5E2C /* ProjectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0856A6EB1171373C3347D7 /* ProjectController.swift */; };
+		A64F5C90DF5B493D492E12B9 /* ClaudePlanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05876D8E87E0D8E8B8A8A5F2 /* ClaudePlanner.swift */; };
+		AC6674DE445F1BFB84DF8A5F /* ResourceSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69B1D530D64ED0BF83BE8FE /* ResourceSheetView.swift */; };
+		AF189D1614A51CCBBDC3B59E /* QuickPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648DA9566CFAEFA4C1FA90A9 /* QuickPlanView.swift */; };
+		D39684CA991AD846BE19FA39 /* TaskInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBC7C1DF696E93584B8F91D /* TaskInspector.swift */; };
+		D943B0026CE187DE50E18D7E /* ProjectWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116048A6DBB5689174A3AC51 /* ProjectWindow.swift */; };
+		E5538FC28EB2641621DA9FE1 /* CommitTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1B086EB9A8186756DDAE32 /* CommitTextField.swift */; };
+		EAC8DA4FD8E603EBB069E1A1 /* ResourceSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69B1D530D64ED0BF83BE8FE /* ResourceSheetView.swift */; };
+		ECF658D97EAE62B6B9558822 /* TimelineScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DF6C9D15910B28BDF8C8FF /* TimelineScale.swift */; };
+		F63DD509673C1DBDDEAEA642 /* TaskInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBC7C1DF696E93584B8F91D /* TaskInspector.swift */; };
+		FC2E155D69F62A0DE662D417 /* ProjectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0856A6EB1171373C3347D7 /* ProjectController.swift */; };
+		FF7CACEB84755D557A14C127 /* TimelineSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FED60236DB340181339D84 /* TimelineSplitView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		05876D8E87E0D8E8B8A8A5F2 /* ClaudePlanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaudePlanner.swift; sourceTree = "<group>"; };
+		09FED60236DB340181339D84 /* TimelineSplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineSplitView.swift; sourceTree = "<group>"; };
+		0B4D9A4DAD451D304235A7E9 /* GanttView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GanttView.swift; sourceTree = "<group>"; };
+		116048A6DBB5689174A3AC51 /* ProjectWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectWindow.swift; sourceTree = "<group>"; };
+		150BA2966036265E09AC64FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1E1B2D5359524CC7C4832751 /* Projector-iOS.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = "Projector-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		25DF6C9D15910B28BDF8C8FF /* TimelineScale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineScale.swift; sourceTree = "<group>"; };
+		2CB8FDF2799927FDDF29413F /* ResourcePlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcePlanView.swift; sourceTree = "<group>"; };
+		372DAD60F2D83DFF8D48FAF5 /* Projector-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Projector-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C0856A6EB1171373C3347D7 /* ProjectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectController.swift; sourceTree = "<group>"; };
+		648DA9566CFAEFA4C1FA90A9 /* QuickPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickPlanView.swift; sourceTree = "<group>"; };
+		7EBC7C1DF696E93584B8F91D /* TaskInspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskInspector.swift; sourceTree = "<group>"; };
+		979F349674E54193651408A8 /* ProjectSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSettingsView.swift; sourceTree = "<group>"; };
+		A4FB8F4CA73E6560A337500C /* GanttRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GanttRenderer.swift; sourceTree = "<group>"; };
+		B1AC4F55C6640994EA45ED7A /* ProjectorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectorApp.swift; sourceTree = "<group>"; };
+		C69B1D530D64ED0BF83BE8FE /* ResourceSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceSheetView.swift; sourceTree = "<group>"; };
+		C86117A7763C14C072392C2F /* ProjectorKit */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ProjectorKit; path = Packages/ProjectorKit; sourceTree = SOURCE_ROOT; };
+		CA1B086EB9A8186756DDAE32 /* CommitTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitTextField.swift; sourceTree = "<group>"; };
+		CDE6EE451CB281195A0E22B7 /* ProjectDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDocument.swift; sourceTree = "<group>"; };
+		E9CEE971E8742A70E825D914 /* ResourceInspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceInspector.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9C6061ADDC9542745A0FE7F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75F267AAF5E9354B0374FDE7 /* ProjectorKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2A762BACD575699E60C18E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9926DA7EB4BE385618B0BD2A /* ProjectorKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		09C7981D2038FB8B38A986B1 /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				25DF6C9D15910B28BDF8C8FF /* TimelineScale.swift */,
+				09FED60236DB340181339D84 /* TimelineSplitView.swift */,
+			);
+			path = Timeline;
+			sourceTree = "<group>";
+		};
+		26EAF7D925766C42A9D12CF9 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				C86117A7763C14C072392C2F /* ProjectorKit */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		29E092AFD6E77BECDB90F3C1 /* QuickPlan */ = {
+			isa = PBXGroup;
+			children = (
+				05876D8E87E0D8E8B8A8A5F2 /* ClaudePlanner.swift */,
+				648DA9566CFAEFA4C1FA90A9 /* QuickPlanView.swift */,
+			);
+			path = QuickPlan;
+			sourceTree = "<group>";
+		};
+		38954AA2CAB2A96C43F7BFB8 = {
+			isa = PBXGroup;
+			children = (
+				A31BF1139E83E4FA8619708F /* App */,
+				26EAF7D925766C42A9D12CF9 /* Packages */,
+				3FDEC7564BDD10F16FE03F1E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3FDEC7564BDD10F16FE03F1E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1E1B2D5359524CC7C4832751 /* Projector-iOS.app */,
+				372DAD60F2D83DFF8D48FAF5 /* Projector-macOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7B597C3DA7767BB4D25CF635 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2CB8FDF2799927FDDF29413F /* ResourcePlanView.swift */,
+				C69B1D530D64ED0BF83BE8FE /* ResourceSheetView.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		83F39C335EFE099560B18C86 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				CA1B086EB9A8186756DDAE32 /* CommitTextField.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		A31BF1139E83E4FA8619708F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				DF3F2AECE0483AAD21183A1E /* Shared */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B236E700C02A8368009EC72C /* Inspectors */ = {
+			isa = PBXGroup;
+			children = (
+				E9CEE971E8742A70E825D914 /* ResourceInspector.swift */,
+				7EBC7C1DF696E93584B8F91D /* TaskInspector.swift */,
+			);
+			path = Inspectors;
+			sourceTree = "<group>";
+		};
+		BCA3C9D0BF1CC9108FBD92EB /* Gantt */ = {
+			isa = PBXGroup;
+			children = (
+				A4FB8F4CA73E6560A337500C /* GanttRenderer.swift */,
+				0B4D9A4DAD451D304235A7E9 /* GanttView.swift */,
+			);
+			path = Gantt;
+			sourceTree = "<group>";
+		};
+		DF3F2AECE0483AAD21183A1E /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				150BA2966036265E09AC64FF /* Assets.xcassets */,
+				3C0856A6EB1171373C3347D7 /* ProjectController.swift */,
+				CDE6EE451CB281195A0E22B7 /* ProjectDocument.swift */,
+				B1AC4F55C6640994EA45ED7A /* ProjectorApp.swift */,
+				979F349674E54193651408A8 /* ProjectSettingsView.swift */,
+				116048A6DBB5689174A3AC51 /* ProjectWindow.swift */,
+				83F39C335EFE099560B18C86 /* Components */,
+				BCA3C9D0BF1CC9108FBD92EB /* Gantt */,
+				B236E700C02A8368009EC72C /* Inspectors */,
+				29E092AFD6E77BECDB90F3C1 /* QuickPlan */,
+				7B597C3DA7767BB4D25CF635 /* Resources */,
+				09C7981D2038FB8B38A986B1 /* Timeline */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7E54FF26260272173AF5DC73 /* Projector-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2139ADDA5EDF6777D00AF134 /* Build configuration list for PBXNativeTarget "Projector-iOS" */;
+			buildPhases = (
+				193E57F161F7460388D23B5D /* Sources */,
+				50211BF8C94DE778D7CDB1E6 /* Resources */,
+				9C6061ADDC9542745A0FE7F8 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Projector-iOS";
+			packageProductDependencies = (
+				A02B1E7BE80F340CED93625D /* ProjectorKit */,
+			);
+			productName = "Projector-iOS";
+			productReference = 1E1B2D5359524CC7C4832751 /* Projector-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D6D2A12FBE072BAFB57E6D54 /* Projector-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 430987EE9D3CB10946290AA9 /* Build configuration list for PBXNativeTarget "Projector-macOS" */;
+			buildPhases = (
+				517EEBB364404CD698C01853 /* Sources */,
+				E3B78823C990CF3A1820CB24 /* Resources */,
+				D2A762BACD575699E60C18E8 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Projector-macOS";
+			packageProductDependencies = (
+				ACB45B38847A368CA7879F29 /* ProjectorKit */,
+			);
+			productName = "Projector-macOS";
+			productReference = 372DAD60F2D83DFF8D48FAF5 /* Projector-macOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3BB7367BC2A91849539240A6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					7E54FF26260272173AF5DC73 = {
+						DevelopmentTeam = SZVSSCJQFN;
+						ProvisioningStyle = Automatic;
+					};
+					D6D2A12FBE072BAFB57E6D54 = {
+						DevelopmentTeam = SZVSSCJQFN;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = BC946E12AF14356627CF2961 /* Build configuration list for PBXProject "Projector" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 38954AA2CAB2A96C43F7BFB8;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				437D8AA604F02290BE9D3E40 /* XCLocalSwiftPackageReference "Packages/ProjectorKit" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 3FDEC7564BDD10F16FE03F1E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D6D2A12FBE072BAFB57E6D54 /* Projector-macOS */,
+				7E54FF26260272173AF5DC73 /* Projector-iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		50211BF8C94DE778D7CDB1E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				297A5D4A810F57A384107A02 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3B78823C990CF3A1820CB24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A1C516071F061F36A7ACE74 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		193E57F161F7460388D23B5D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FA31E74D9201C761E87CCDF /* ClaudePlanner.swift in Sources */,
+				E5538FC28EB2641621DA9FE1 /* CommitTextField.swift in Sources */,
+				595518601794F0E783201108 /* GanttRenderer.swift in Sources */,
+				6DEA41A26FDEA2AA2251EBA8 /* GanttView.swift in Sources */,
+				A409021A44AFC78530CF5E2C /* ProjectController.swift in Sources */,
+				7AB7C442694221BC4968B680 /* ProjectDocument.swift in Sources */,
+				79E9D58E4E03F1DCDA3C7C60 /* ProjectSettingsView.swift in Sources */,
+				13BC1FE8B5E97D03D3D459B4 /* ProjectWindow.swift in Sources */,
+				5F6C0EE5FE88C6C0B7056A2A /* ProjectorApp.swift in Sources */,
+				096E153B592EBDEB840F0F3F /* QuickPlanView.swift in Sources */,
+				3782CB0D3FEB153AA3EC3907 /* ResourceInspector.swift in Sources */,
+				322E84FAD1EAC6E85E908A75 /* ResourcePlanView.swift in Sources */,
+				AC6674DE445F1BFB84DF8A5F /* ResourceSheetView.swift in Sources */,
+				D39684CA991AD846BE19FA39 /* TaskInspector.swift in Sources */,
+				031A000FD950274C2222BAEB /* TimelineScale.swift in Sources */,
+				FF7CACEB84755D557A14C127 /* TimelineSplitView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		517EEBB364404CD698C01853 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A64F5C90DF5B493D492E12B9 /* ClaudePlanner.swift in Sources */,
+				3AFF568AF9D7A26F629BB443 /* CommitTextField.swift in Sources */,
+				A0789D4C353D511C3D2961CD /* GanttRenderer.swift in Sources */,
+				9C45E880D93E3AAA7B26F25C /* GanttView.swift in Sources */,
+				FC2E155D69F62A0DE662D417 /* ProjectController.swift in Sources */,
+				06DF460FB3A5B47231F6440D /* ProjectDocument.swift in Sources */,
+				18C301BD01D0A0C791764888 /* ProjectSettingsView.swift in Sources */,
+				D943B0026CE187DE50E18D7E /* ProjectWindow.swift in Sources */,
+				8B0B0B7CBD384E075A0A9A56 /* ProjectorApp.swift in Sources */,
+				AF189D1614A51CCBBDC3B59E /* QuickPlanView.swift in Sources */,
+				5DC00E70A144EF59C1B6F985 /* ResourceInspector.swift in Sources */,
+				57AA235317EB28F31EBD7673 /* ResourcePlanView.swift in Sources */,
+				EAC8DA4FD8E603EBB069E1A1 /* ResourceSheetView.swift in Sources */,
+				F63DD509673C1DBDDEAEA642 /* TaskInspector.swift in Sources */,
+				ECF658D97EAE62B6B9558822 /* TimelineScale.swift in Sources */,
+				42F38F678A3AA4C00079E3F0 /* TimelineSplitView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		5EA60B64E63193C8F9719445 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = App/macOS/Projector.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = App/macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		628E83F7BBE2EAA23960A85B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = SZVSSCJQFN;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Projector;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				MACOSX_DEPLOYMENT_TARGET = 27.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ideahelix.projector;
+				PRODUCT_NAME = Projector;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		8AF4FA40F9092239F85A0A20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = App/iOS/Info.plist;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9252524D65257B21FEE270D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = App/macOS/Projector.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = App/macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		960CDC97FD4172D9AF28762F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = SZVSSCJQFN;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Projector;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				MACOSX_DEPLOYMENT_TARGET = 27.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ideahelix.projector;
+				PRODUCT_NAME = Projector;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		C70814607FF0C1B936F86B64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = App/iOS/Info.plist;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2139ADDA5EDF6777D00AF134 /* Build configuration list for PBXNativeTarget "Projector-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C70814607FF0C1B936F86B64 /* Debug */,
+				8AF4FA40F9092239F85A0A20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		430987EE9D3CB10946290AA9 /* Build configuration list for PBXNativeTarget "Projector-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EA60B64E63193C8F9719445 /* Debug */,
+				9252524D65257B21FEE270D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		BC946E12AF14356627CF2961 /* Build configuration list for PBXProject "Projector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				960CDC97FD4172D9AF28762F /* Debug */,
+				628E83F7BBE2EAA23960A85B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		437D8AA604F02290BE9D3E40 /* XCLocalSwiftPackageReference "Packages/ProjectorKit" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/ProjectorKit;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A02B1E7BE80F340CED93625D /* ProjectorKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ProjectorKit;
+		};
+		ACB45B38847A368CA7879F29 /* ProjectorKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ProjectorKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 3BB7367BC2A91849539240A6 /* Project object */;
+}
