@@ -4,6 +4,26 @@ import ProjectorKit
 
 extension UTType {
     static let projectorPlan = UTType(exportedAs: "com.ideahelix.projector.plan")
+    static let primaveraXER = UTType(importedAs: "com.oracle.primavera.xer", conformingTo: .data)
+}
+
+extension InterchangeFormat {
+    var contentType: UTType {
+        switch self {
+        case .msProject: .xml
+        case .primavera: .primaveraXER
+        }
+    }
+}
+
+/// The plan as an MS Project XML or Primavera XER file, for the export panel.
+struct InterchangeExport: Transferable {
+    let project: Project
+
+    static var transferRepresentation: some TransferRepresentation {
+        DataRepresentation(exportedContentType: .xml) { Interchange.export($0.project, as: .msProject) }
+        DataRepresentation(exportedContentType: .primaveraXER) { Interchange.export($0.project, as: .primavera) }
+    }
 }
 
 /// A `.projector` file: the project serialized as JSON.

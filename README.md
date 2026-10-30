@@ -7,6 +7,7 @@ An MS Project–style planner for macOS, iPad and iPhone. Watch the [2½-minute 
 - schedule them with the critical path method
 - assign resources and see who is overallocated
 - switch between the Gantt chart and the resource plan
+- import and export Microsoft Project XML and Primavera P6 XER files
 
 Projects are `.projector` documents (JSON). Save them in iCloud Drive to work on the same plan from all three devices.
 
@@ -38,6 +39,7 @@ A signed, notarized Mac build is attached to each [GitHub release](../../release
 | **Resources** | Resource sheet (max units, rate, group). The **resource plan** is a spreadsheet, like MS Project's Resource Usage view. Each resource has a row with its assignments underneath, and there's a Total row. Columns are days, weeks or months; cells show work hours, % of capacity or FTE. Overallocated cells are red. **Copy Grid** copies it as tab-separated text that pastes into Excel or Numbers. **Level Resources** delays lower-priority tasks to clear the overallocation. |
 | **Tracking** | % complete, baseline (set/clear, drawn under the bars), work and cost roll-ups. |
 | **Quick Plan** | Jot a whole plan down as text and preview its finish date and critical path live, then apply it. Or press **Plan with Claude** to turn rough notes into a full WBS with estimates, links and assignments. |
+| **MS Project & Primavera** | **Import from MS Project or Primavera…** (File menu on the Mac, Tools menu on iPad and iPhone) replaces the plan with a Microsoft Project XML or Primavera P6 XER file; Undo brings the old plan back. **Export** writes either format. See [Exchanging plans](#exchanging-plans-with-ms-project-and-primavera). |
 | **Platforms** | macOS (menu commands, multi-select with ⌘/⇧-click, inspector), iPad (full grid and inspector), iPhone (compact grid; tap a row to open the task editor as a sheet). |
 
 ## Quick Plan notation
@@ -60,6 +62,45 @@ Launch 0d after QA, 2026-12-01 by 2026-12-18   ← not before Dec 1, deadline De
 
 The Quick Plan sheet can send your notes to Claude (`claude-opus-5-5`) through the Messages API. Claude replies in the same notation, so you can review and edit the result before applying it, and **Revert to My Notes** restores what you wrote. Add an API key from console.anthropic.com in the sheet; it is stored in the keychain. When you run Xcode, the `ANTHROPIC_API_KEY` environment variable is used if no key is stored.
 
+## Exchanging plans with MS Project and Primavera
+
+| Format | Open in | Save from |
+|---|---|---|
+| Microsoft Project XML (`.xml`, MSPDI) | MS Project: **File › Open**, choose *XML Format* | MS Project: **File › Save As › XML Format** |
+| Primavera P6 XER (`.xer`) | P6 Professional: **File › Import › Primavera PM (XER)** | P6: **File › Export › Primavera PM (XER)** |
+
+MS Project's own `.mpp` files are a closed binary format; save them as XML in MS Project first.
+
+What carries over in both directions:
+- the outline
+- durations and milestones
+- FS/SS/FF/SF links with lag
+- the working week and holidays
+- resources with max units and rate
+- assignments with units
+- % complete
+- start limits: *Starts after* ⇄ Start No Earlier Than / Start On or After
+- *Must start on* ⇄ Must Start On / Mandatory Start
+- deadlines: *Finish by* ⇄ Deadline or Finish No Later Than / Finish On or Before
+
+MS Project XML also carries notes, baselines and leveling delay.
+
+Primavera has no summary activities, so:
+- each phase becomes a WBS element and its subtasks the activities under it;
+- on export, a phase's links and date limits are applied to each of its subtasks;
+- on import, a resource's parent resource becomes its group.
+
+The importer skips, and lists what it skipped:
+- other constraint types;
+- percentage lags;
+- recurring calendar exceptions;
+- material and cost resources;
+- links to other projects.
+
+When an XER file holds several projects, the one with the most activities is imported.
+
+Both formats are tested against [MPXJ](https://www.mpxj.org), the open-source library most schedule converters use. MPXJ reads Projector's files, and Projector reads files MPXJ writes; the schedule comes out identical. They haven't yet been opened in MS Project or P6 themselves.
+
 ## Layout
 
 ```
@@ -72,6 +113,7 @@ Packages/ProjectorKit/        platform-independent model and engine (unit tested
   Timephased.swift            work per day / week / month for the resource plan
   Editing.swift               indent/outdent/move/delete/link with validation
   Parsing.swift, QuickPlan.swift   MS Project–style text entry and the Quick Plan notation
+  MSProjectXML.swift, PrimaveraXER.swift   import/export (Interchange.swift: format detection, shared helpers)
 App/Shared/                   SwiftUI app shared by both targets
   ProjectDocument.swift       Document protocol (iOS/macOS 27), JSON file format
   ProjectController.swift     per-window state; every edit is one undo step (this drives autosave)

@@ -41,6 +41,9 @@ final class ProjectController {
     var showInspector = false
     var showSettings = false
     var showQuickPlan = false
+    var showImporter = false
+    /// The format being exported; the save panel is open while it is set.
+    var exportFormat: InterchangeFormat?
     var alertMessage: String?
 
     init(document: ProjectDocument) {
@@ -218,6 +221,23 @@ final class ProjectController {
         edit("Load Sample Project") { $0 = Project.sample() }
         collapsed = []
         selection = []
+    }
+
+    /// Replaces the plan with an MS Project XML or Primavera XER file (one undoable step).
+    func importPlan(from url: URL) {
+        let scoped = url.startAccessingSecurityScopedResource()
+        defer { if scoped { url.stopAccessingSecurityScopedResource() } }
+        do {
+            let result = try Interchange.importFile(Data(contentsOf: url))
+            edit("Import \(url.lastPathComponent)") { $0 = result.project }
+            collapsed = []
+            selection = []
+            mode = .gantt
+            let summary = "Imported \(result.project.tasks.count) tasks, \(result.project.dependencies.count) links and \(result.project.resources.count) resources. Undo restores your previous plan."
+            alertMessage = ([summary] + result.warnings).joined(separator: "\n\n")
+        } catch {
+            alertMessage = error.localizedDescription
+        }
     }
 
     /// Zoom changes the bar scale in the Gantt chart and the column period in the resource plan.

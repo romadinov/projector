@@ -39,6 +39,17 @@ struct ProjectCommands: Commands {
     @FocusedValue(ProjectController.self) private var controller
 
     var body: some Commands {
+        CommandGroup(replacing: .importExport) {
+            Button("Import from MS Project or Primavera…") { controller?.showImporter = true }
+                .disabled(controller == nil)
+            Menu("Export") {
+                ForEach(InterchangeFormat.allCases) { format in
+                    Button("\(format.title)…") { controller?.exportFormat = format }
+                }
+            }
+            .disabled(controller == nil)
+        }
+
         CommandMenu("Task") { Group {
             Button("Insert Task") { controller?.addTask() }
                 .keyboardShortcut(.return, modifiers: .command)

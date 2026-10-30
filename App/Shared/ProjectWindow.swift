@@ -40,6 +40,18 @@ struct ProjectWindow: View {
         }
         .sheet(isPresented: $controller.showSettings) { ProjectSettingsView(controller: controller) }
         .sheet(isPresented: $controller.showQuickPlan) { QuickPlanView(controller: controller) }
+        .fileImporter(isPresented: $controller.showImporter, allowedContentTypes: [.xml, .primaveraXER]) { result in
+            switch result {
+            case .success(let url): controller.importPlan(from: url)
+            case .failure(let error): controller.alertMessage = error.localizedDescription
+            }
+        }
+        .fileExporter(isPresented: Binding(get: { controller.exportFormat != nil }, set: { if !$0 { controller.exportFormat = nil } }),
+                      item: InterchangeExport(project: controller.project),
+                      contentTypes: controller.exportFormat.map { [$0.contentType] } ?? [],
+                      defaultFilename: controller.project.name) { result in
+            if case .failure(let error) = result { controller.alertMessage = error.localizedDescription }
+        }
         .alert("Projector", isPresented: Binding(
             get: { controller.alertMessage != nil },
             set: { if !$0 { controller.alertMessage = nil } })) {
@@ -294,6 +306,13 @@ struct ProjectToolbar: ToolbarContent {
         Button("Clear Baseline", systemImage: "flag.slash") { controller.clearBaseline() }
         Divider()
         Button("Project Information…", systemImage: "info.circle") { controller.showSettings = true }
+        Divider()
+        Button("Import from MS Project or Primavera…", systemImage: "square.and.arrow.down") { controller.showImporter = true }
+        Menu("Export", systemImage: "square.and.arrow.up") {
+            ForEach(InterchangeFormat.allCases) { format in
+                Button("\(format.title)…") { controller.exportFormat = format }
+            }
+        }
         Button("Load Sample Project", systemImage: "doc.badge.gearshape") { controller.loadSample() }
     }
 }

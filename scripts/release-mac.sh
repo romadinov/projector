@@ -40,6 +40,7 @@ Projector for Mac, signed with Developer ID and notarized by Apple. Unzip and mo
 - Critical path (forward and backward CPM passes, total slack)
 - "Starts after" dates and "Finish by" deadlines on tasks and phases; late tasks get negative slack and are flagged
 - Resources, a spreadsheet-style resource plan (days / weeks / months) and resource levelling
+- Import and export Microsoft Project XML and Primavera P6 XER files (File › Import / Export)
 - Quick Plan: jot a plan as text, preview the finish date and critical path, or let Claude flesh it out
 
 **Projector_demo.mp4** is a 2½-minute narrated walkthrough on iPad.
